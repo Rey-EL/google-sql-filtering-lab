@@ -1,49 +1,66 @@
-# SQL Data Filtering for Cybersecurity
+# Google Cybersecurity Certificate: SQL for Investigations
 
-## Project Description
-This project demonstrates my ability to filter data using SQL in a cybersecurity context. As part of a hands-on lab in the Google Cybersecurity Certificate program, I worked with a simulated MariaDB database containing employee and login activity data. My objective was to investigate potential security incidents and support system updates by writing SQL queries that use AND, OR, and NOT operators. These queries reflect real-world tasks such as identifying failed logins, isolating department-specific users, and filtering by time, date, and location.
+This project showcases my ability to use SQL for cybersecurity investigations, a hands-on lab from the Google Cybersecurity Certificate program. The goal was to query a simulated employee database to identify security events and support system administration tasks.
 
-## Task 1: Retrieve After-Hours Failed Login Attempts
-To identify failed login attempts that occurred after business hours (after 18:00), I used the AND operator. The success column stores Boolean values, where 0 represents a failed attempt. This query helps isolate potentially unauthorized access attempts.
+---
+
+## Objective
+
+To investigate potential security incidents by writing SQL queries to filter a database of employee records and login attempts. This involved using `AND`, `OR`, and `NOT` operators to isolate specific data points relevant to a security analyst.
+
+---
+
+## Demonstrated SQL Techniques
+
+Below are examples of the queries written during the lab, demonstrating different filtering techniques.
+
+### 1. Filtering by Time and Status
+**Goal:** Identify potentially unauthorized access by finding failed login attempts that occurred after business hours (18:00).
 
 ```sql
 SELECT * FROM log_in_attempts WHERE login_time > '18:00:00' AND success = 0;
 ```
 
-## Task 2: Retrieve Login Attempts on Specific Dates
-To investigate a suspicious event on May 9, 2022, I retrieved all login attempts from that day and the day before. I used the OR operator to filter for both dates.
+### 2. Filtering by Date Range
+**Goal:** Investigate a security event by retrieving all login activity from a specific date and the day prior.
 
 ```sql
 SELECT * FROM log_in_attempts WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';
 ```
 
-## Task 3: Retrieve Login Attempts Outside of Mexico
-To exclude login attempts originating from Mexico, I used the NOT and LIKE operators. I filtered out any values starting with "MEX".
+### 3. Excluding by Location
+**Goal:** Narrow an investigation by excluding all login attempts originating from a specific country (Mexico).
 
 ```sql
 SELECT * FROM log_in_attempts WHERE NOT country LIKE 'MEX%';
 ```
 
-## Task 4: Retrieve Employees in Marketing
-To find employees in the Marketing department in the East building, I used AND and LIKE to match offices starting with "East". This helps target specific employees for machine updates.
+### 4. Filtering by Department and Office
+**Goal:** Support a targeted system update by identifying all employees in the Marketing department who work in an "East" building office.
 
 ```sql
 SELECT * FROM employees WHERE department = 'Marketing' AND office LIKE 'East-%';
 ```
 
-## Task 5: Retrieve Employees in Finance or Sales
-To retrieve employees in either the Finance or Sales departments, I used the OR operator.
+### 5. Filtering for Multiple Departments
+**Goal:** Retrieve a list of all employees working in either the Finance or Sales departments.
 
 ```sql
 SELECT * FROM employees WHERE department = 'Finance' OR department = 'Sales';
 ```
 
-## Task 6: Retrieve All Employees Not in IT
-To find all employees not in the Information Technology department, I used the NOT operator. This is a practical step in staged rollouts.
+### 6. Excluding a Department
+**Goal:** Create a list of all employees *not* in the IT department, often a necessary step for planning phased software rollouts.
 
 ```sql
 SELECT * FROM employees WHERE NOT department = 'Information Technology';
 ```
 
-## Summary
-This lab gave me practical experience in writing SQL queries that filter data based on multiple conditions. I used AND, OR, and NOT operators to retrieve failed login attempts, filter by date and time, and isolate employee records. These queries reflect real-world tasks in cybersecurity investigations, including threat detection, access auditing, and asset management.
+---
+
+## Summary of Skills
+
+This lab provided practical experience in using fundamental SQL `WHERE` clauses to support cybersecurity functions. The key skills demonstrated include:
+*   **Threat Hunting:** Isolating suspicious login patterns based on time, date, and location.
+*   **Data Auditing:** Retrieving specific records to verify user activity.
+*   **Asset Management:** Filtering employee lists to support targeted system updates and policy enforcement.
