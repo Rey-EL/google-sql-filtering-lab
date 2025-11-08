@@ -1,4 +1,4 @@
-# Google Cybersecurity Certificate: SQL for Investigations
+# google-sql-filtering-lab
 
 This project showcases my ability to use SQL for cybersecurity investigations, a hands-on lab from the Google Cybersecurity Certificate program. The goal was to query a simulated employee database to identify security events and support system administration tasks.
 
