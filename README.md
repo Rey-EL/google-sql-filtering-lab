@@ -75,7 +75,7 @@ While this lab focuses on using SQL for investigative purposes, it is crucial to
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the [MIT License](./LICENSE.md) - see the LICENSE.md file for details.
 
 ---
 
