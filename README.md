@@ -64,3 +64,15 @@ This lab provided practical experience in using fundamental SQL `WHERE` clauses 
 *   **Threat Hunting:** Isolating suspicious login patterns based on time, date, and location.
 *   **Data Auditing:** Retrieving specific records to verify user activity.
 *   **Asset Management:** Filtering employee lists to support targeted system updates and policy enforcement.
+
+---
+
+## Security Considerations
+
+While this lab focuses on using SQL for investigative purposes, it is crucial to remember that SQL databases are often targets of attacks. One of the most critical vulnerabilities is **SQL Injection**, listed in the OWASP Top 10. In real-world applications, it is vital to use parameterized queries or prepared statements to prevent SQL Injection attacks, rather than concatenating user input directly into SQL queries. This practice ensures that user input is treated as data, not executable code, thereby protecting the database from malicious manipulation.
+
+---
+
+## Objective
+
+To investigate potential security incidents by writing SQL queries to filter a database of employee records and login attempts. This involved using `AND`, `OR`, and `NOT` operators to isolate specific data points relevant to a security analyst.
