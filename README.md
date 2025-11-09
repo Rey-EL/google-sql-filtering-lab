@@ -73,6 +73,12 @@ While this lab focuses on using SQL for investigative purposes, it is crucial to
 
 ---
 
-## Objective
+## License
 
-To investigate potential security incidents by writing SQL queries to filter a database of employee records and login attempts. This involved using `AND`, `OR`, and `NOT` operators to isolate specific data points relevant to a security analyst.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or want to enhance the lab, please feel free to open an issue or submit a pull request.
